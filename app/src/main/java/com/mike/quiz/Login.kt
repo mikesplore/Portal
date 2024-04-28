@@ -121,7 +121,7 @@ var name by remember {
                 horizontalArrangement = Arrangement.Center){
 
 
-            Button(onClick = { /*TODO*/ },
+            Button(onClick = { navController.navigate("units") },
                 shape = RoundedCornerShape(10.dp),
                 modifier = Modifier
                     .height(50.dp)

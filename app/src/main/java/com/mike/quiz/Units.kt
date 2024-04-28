@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,9 +24,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun Units() {
+fun Units(navController: NavController) {
     Column(
         modifier = Modifier
             .background(brush = brush)
@@ -38,7 +39,7 @@ fun Units() {
         // Title
         Row(
             modifier = Modifier
-                .absolutePadding(0.dp,30.dp)
+                .absolutePadding(0.dp, 30.dp)
                 .height(50.dp)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
@@ -73,9 +74,9 @@ fun Units() {
 
         // Continue button
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { navController.navigate("start") },
             modifier = Modifier
-                .absolutePadding(0.dp,50.dp)
+                .absolutePadding(0.dp, 50.dp)
                 .width(300.dp)
                 .height(50.dp),
             shape = RoundedCornerShape(10.dp),
@@ -89,5 +90,5 @@ fun Units() {
 @Preview
 @Composable
 fun unitspreview(){
-    Units()
+    Units(navController = rememberNavController())
 }
