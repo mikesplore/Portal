@@ -72,7 +72,7 @@ fun mainscreen(){
         .width(350.dp)
         .height(200.dp)
         .clip(RoundedCornerShape(15.dp))
-        .background(Color(0xff39A7FF).copy(alpha = 0.8f))
+        .background(Color(0xffFFEAD2).copy(alpha = 0.8f))
         .padding(16.dp),
         verticalArrangement = Arrangement.SpaceAround,
         horizontalAlignment = Alignment.CenterHorizontally

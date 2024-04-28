@@ -28,9 +28,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Thestart(){
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "start") {
+    NavHost(navController = navController, startDestination = "login") {
         composable("start"){ mainScreen(navController = navController)}
         composable("login"){ Login(navController = navController)}
+        composable("units"){ Units(navController = navController)}
 
     }
 }
